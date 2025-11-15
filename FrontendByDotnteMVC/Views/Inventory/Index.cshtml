@@ -1,0 +1,32 @@
+﻿@model List<FrontendByDotnetMVC.Models.Inventory.InventoryViewModel>
+
+<h2>Inventory List</h2>
+
+<p>
+    <a class="btn btn-primary" href="/Inventory/Create">Add New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>ProductId</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.ProductId</td>
+                <td>@item.Quantity</td>
+                <td>
+                    <a class="btn btn-warning" href="/Inventory/Edit/@item.ProductId">Edit</a>
+                    <a class="btn btn-danger" href="/Inventory/Delete/@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,48 @@
+﻿@model OrderService.Models.CreateOrderDto
+
+<h2>Create Order</h2>
+
+<form method="post">
+
+    <div class="form-group">
+        <label>Customer</label>
+        <select asp-for="CustomerId" class="form-control">
+            @foreach (var c in ViewBag.Customers)
+            {
+                <option value="@c.Id">@c.Name</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group mt-3">
+        <label>Order Date</label>
+        <input asp-for="OrderDate" class="form-control" type="datetime-local" />
+    </div>
+
+    <h4 class="mt-4">Order Items</h4>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Qty</th>
+            </tr>
+        </thead>
+
+        <tbody id="items">
+            <tr>
+                <td>
+                    <select name="OrderItemDtos[0].ProductId" class="form-control">
+                        @foreach (var p in ViewBag.Products)
+                        {
+                            <option value="@p.Id">@p.ProductName</option>
+                        }
+                    </select>
+                </td>
+                <td><input class="form-control" name="OrderItemDtos[0].Quantity" type="number" min="1" value="1" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-success mt-2">Submit</button>
+</form>

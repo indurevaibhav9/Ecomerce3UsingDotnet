@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<div class="container mt-4">
+
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Welcome to the Admin Dashboard</h2>
+        <p class="text-muted">Manage customers, products, inventory, and orders from one place.</p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- Customer Card -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 rounded-3 hover-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-people-fill text-primary" style="font-size: 3rem;"></i>
+                    <h5 class="mt-3">Customers</h5>
+                    <p class="text-muted small">Add, update, and view customers.</p>
+                    <a href="/Customer" class="btn btn-primary w-100">Manage</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Card -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 rounded-3 hover-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-bag-fill text-success" style="font-size: 3rem;"></i>
+                    <h5 class="mt-3">Products</h5>
+                    <p class="text-muted small">Create, list, and edit products.</p>
+                    <a href="/Product" class="btn btn-success w-100">Manage</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inventory Card -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 rounded-3 hover-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-box-seam-fill text-warning" style="font-size: 3rem;"></i>
+                    <h5 class="mt-3">Inventory</h5>
+                    <p class="text-muted small">Update stock quantities.</p>
+                    <a href="/Inventory" class="btn btn-warning w-100 text-white">Manage</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orders Card -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 rounded-3 hover-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-receipt-cutoff text-info" style="font-size: 3rem;"></i>
+                    <h5 class="mt-3">Orders</h5>
+                    <p class="text-muted small">Create and track orders.</p>
+                    <a href="/Order" class="btn btn-info w-100 text-white">Manage</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<style>
+    .hover-card {
+        transition: 0.3s ease;
+    }
+
+    .hover-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
+    }
+</style>

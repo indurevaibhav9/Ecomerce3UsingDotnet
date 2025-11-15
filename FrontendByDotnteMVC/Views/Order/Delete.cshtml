@@ -1,0 +1,13 @@
+﻿@model FrontendByDotnetMVC.Models.Order.OrderViewModel
+
+<h2>Delete Order</h2>
+
+<p>Are you sure you want to delete this order?</p>
+
+<p><strong>ID:</strong> @Model.Id</p>
+<p><strong>Total:</strong> @Model.TotalAmount</p>
+
+<form method="post">
+    <button class="btn btn-danger">Delete</button>
+    <a class="btn btn-secondary" href="/Order">Cancel</a>
+</form>

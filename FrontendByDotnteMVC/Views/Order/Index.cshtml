@@ -1,0 +1,33 @@
+﻿@model List<FrontendByDotnetMVC.Models.Order.OrderViewModel>
+
+<h2>Orders</h2>
+
+<p><a class="btn btn-primary" href="/Order/Create">Create Order</a></p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Date</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var o in Model)
+        {
+            <tr>
+                <td>@o.Id</td>
+                <td>@o.CustomerId</td>
+                <td>@o.OrderDate.ToShortDateString()</td>
+                <td>@o.TotalAmount</td>
+                <td>
+                    <a class="btn btn-info" href="/Order/Details/@o.Id">Details</a>
+                    <a class="btn btn-danger" href="/Order/Delete/@o.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

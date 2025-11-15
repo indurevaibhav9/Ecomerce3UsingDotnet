@@ -1,0 +1,19 @@
+﻿@model FrontendByDotnetMVC.Models.Inventory.CreateInventoryViewModel
+
+<h2>Add Inventory</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label>Product ID</label>
+        <input asp-for="ProductId" class="form-control" />
+        <span asp-validation-for="ProductId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Quantity</label>
+        <input asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-2">Create</button>
+</form>

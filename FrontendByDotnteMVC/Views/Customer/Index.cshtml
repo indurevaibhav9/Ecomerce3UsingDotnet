@@ -1,0 +1,35 @@
+﻿@model List<FrontendByDotnteMVC.Models.Customer.Customer>
+
+<h2>Customers</h2>
+
+<p>
+    <a class="btn btn-primary" href="/Customer/Create">Create New</a>
+</p>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>UserName</th>
+        <th>Phone</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var c in Model)
+    {
+        <tr>
+            <td>@c.Id</td>
+            <td>@c.Name</td>
+            <td>@c.Email</td>
+            <td>@c.UserName</td>
+            <td>@c.Phone</td>
+
+            <td>
+                <a href="/Customer/Details/@c.Id" class="btn btn-info">Details</a>
+                <a href="/Customer/Edit/@c.Id" class="btn btn-warning">Edit</a>
+                <a href="/Customer/Delete/@c.Id" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

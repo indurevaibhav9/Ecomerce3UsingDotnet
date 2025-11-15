@@ -1,0 +1,30 @@
+﻿@model FrontendByDotnetMVC.Models.Order.OrderViewModel
+
+<h2>Order Details</h2>
+
+<p><strong>Order ID:</strong> @Model.Id</p>
+<p><strong>Customer:</strong> @Model.CustomerId</p>
+<p><strong>Date:</strong> @Model.OrderDate</p>
+<p><strong>Total:</strong> @Model.TotalAmount</p>
+
+<h3>Items</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Qty</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.OrderItems)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.Quantity</td>
+                <td>@item.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>
