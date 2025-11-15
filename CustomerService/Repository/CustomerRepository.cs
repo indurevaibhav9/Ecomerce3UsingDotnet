@@ -63,6 +63,8 @@ namespace UserService.Repository
             existingCustomerTask.UserName = customer.UserName;
             existingCustomerTask.Password = customer.Password;
             existingCustomerTask.Name = customer.Name;
+
+            await _context.SaveChangesAsync();
                 return existingCustomerTask;
 
         }

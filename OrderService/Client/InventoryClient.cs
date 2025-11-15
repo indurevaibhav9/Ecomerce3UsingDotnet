@@ -38,7 +38,7 @@ namespace OrderService.Clients
                 inventory.Quantity -= requiredQty;
 
                 // Step 3: Update the inventory in the InventoryService (PUT request)
-                var updateResponse = await _httpClient.PutAsJsonAsync($"api/inventorys/{inventory.Id}", inventory);
+                var updateResponse = await _httpClient.PutAsJsonAsync($"api/inventorys/{inventory.ProductId}", inventory);
 
                 if (!updateResponse.IsSuccessStatusCode)
                 {

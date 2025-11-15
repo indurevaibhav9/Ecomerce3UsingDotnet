@@ -18,7 +18,7 @@ namespace InventoryService.Clients
         {
             try
             {
-                var response = await _httpClient.GetAsync($"{productId}");
+                var response = await _httpClient.GetAsync($"product/{productId}");
                 return response.IsSuccessStatusCode; // 200 OK means valid
             }
             catch (Exception ex)

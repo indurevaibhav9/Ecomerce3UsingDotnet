@@ -65,7 +65,7 @@ namespace InventoryService.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateInventory(int id, [FromBody] Inventory inventory)
         {
-            if (id != inventory.Id)
+            if (id != inventory.ProductId)
                 return BadRequest("Inventory ID mismatch.");
 
             var existing = await _repository.GetInventory(inventory.ProductId);
@@ -81,14 +81,6 @@ namespace InventoryService.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteInventory(int id)
         {
-            bool isValid = await _productClient.IsProductValidAsync(id);
-            if (!isValid)
-                return BadRequest($"Product with ID {id} does not exist.");
-
-            var existing = await _repository.GetInventory(id);
-            if (existing == null)
-                return NotFound($"Inventory with ID {id} not found.");
-
             var result = await _repository.DeleteInventory(id);
             if (!result)
                 return StatusCode(500, "Error deleting inventory record.");

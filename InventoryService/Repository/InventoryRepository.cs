@@ -33,10 +33,10 @@ public class InventoryRepository : IInventoryRepository
     public async Task<Inventory> UpdateInventory(Inventory updatedInventory)
     {
         var existing = await _context.InventoryItems
-            .FirstOrDefaultAsync(i => i.Id == updatedInventory.Id);
+            .FirstOrDefaultAsync(i => i.ProductId == updatedInventory.ProductId);
 
         if (existing == null)
-            throw new Exception($"Inventory with Id {updatedInventory.Id} not found.");
+            throw new Exception($"Inventory with productId Id {updatedInventory.ProductId} not found.");
 
         // ✅ Update only the necessary fields
         existing.Quantity = updatedInventory.Quantity;

@@ -20,7 +20,7 @@ namespace InventoryService
             builder.Services.AddSwaggerGen();
             builder.Services.AddHttpClient<IProductClient, ProductClient>(client =>
             {
-                client.BaseAddress = new Uri("http://localhost:5002/api/products/");
+                client.BaseAddress = new Uri("http://localhost:5000/");
             });
 
             builder.Services.AddScoped<IInventoryRepository, InventoryRepository>();
