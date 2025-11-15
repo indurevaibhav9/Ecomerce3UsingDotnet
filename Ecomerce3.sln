@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36414.22 d17.14
+VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerService", "CustomerService\CustomerService.csproj", "{00D29A08-B75B-4376-93A1-E685B83C27EA}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryService", "InventoryService\InventoryService.csproj", "{423E12C0-7FEA-4C38-9C82-55542D7399AB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway", "APIGateway\APIGateway.csproj", "{16D9ED10-B12D-4837-ABB9-1F2059C75914}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontendByDotnteMVC", "..\EcommerceFrontendByDotnetMVC\FrontendByDotnteMVC\FrontendByDotnteMVC.csproj", "{47E8FDDD-A8B2-E51A-A18C-225DBC8803D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{16D9ED10-B12D-4837-ABB9-1F2059C75914}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16D9ED10-B12D-4837-ABB9-1F2059C75914}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16D9ED10-B12D-4837-ABB9-1F2059C75914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47E8FDDD-A8B2-E51A-A18C-225DBC8803D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47E8FDDD-A8B2-E51A-A18C-225DBC8803D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47E8FDDD-A8B2-E51A-A18C-225DBC8803D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47E8FDDD-A8B2-E51A-A18C-225DBC8803D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
